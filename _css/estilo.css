@@ -1,0 +1,218 @@
+ /*Reset CSS da propriedade de imagem e padding*/
+ 
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ body {
+     background-image: url('../_imagens/fundo9.jpg');
+     background-size: auto 100vh;
+     height: 100vh;
+     font-family: 'Source Code Pro', monospace;
+     height: 100vh;
+     font-size: 12px;
+     color: darkred;
+ }
+ /*Se a tela tiver ao menos 400px vai carregar este estilo */
+ 
+ @media (min-width: 400px) {
+     body {
+         font-size: 14px;
+     }
+ }
+ /*Breakpoint*/
+ 
+ @media (min-width: 600px) {
+     body {
+         font-size: 18px;
+     }
+ }
+ /*Breakpoint*/
+ 
+ @media (min-width: 1200px) {
+     body {
+         font-size: 20px;
+     }
+ }
+ 
+ header {
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .menu {
+     background-color: rgba(192, 191, 191, 0.678);
+     color: #606060;
+     position: fixed;
+     width: 100vw;
+     top: 0;
+     padding: 0px;
+     margin-bottom: 0px;
+     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+     z-index: 1;
+ }
+ 
+ .menu a {
+     display: block;
+     padding: 10px 20px;
+     transition: background-color 1s, color 1s;
+ }
+ 
+ .menua:active,
+ .menu a:hover {
+     background-color: rgba(36, 46, 49, 0.753);
+     color: white;
+     border-radius: 60px;
+ }
+ 
+ a {
+     color: white;
+     text-decoration: none;
+ }
+ 
+ a:hover {
+     text-decoration: underline;
+ }
+ 
+ .menu ul {
+     display: flex;
+     justify-content: space-around;
+ }
+ 
+ .menu li {
+     list-style: none;
+ }
+ 
+ .titulo {
+     transform: scale(0.2) translateY(50vh);
+     opacity: 0;
+     animation: 1s ease 2s animacaoTitulo forwards;
+ }
+ 
+ @keyframes animacaoTitulo {
+     from {
+         transform: scale(0.2) translateY(50vh);
+         opacity: 0;
+     }
+     to {
+         transform: scale(1) translateY(0);
+         opacity: 1;
+     }
+ }
+ 
+ .site-subtitle,
+ .site-title {
+     color: whitesmoke;
+     text-align: center;
+ }
+ 
+ .site-title {
+     font-size: 4em;
+     font-family: 'Gloria Hallelujah', cursive;
+ }
+ 
+ .site-subtitle {
+     font-style: italic;
+     font-family: 'Press Start 2P', cursive;
+     line-height: 1.8em;
+ }
+ 
+ .contato,
+ .portifolio {
+     padding: 2em;
+     min-height: 100vh;
+ }
+ 
+ .contato h2,
+ .portifolio h2 {
+     font-family: 'Press Start 2P', cursive;
+     color: whitesmoke;
+     margin-bottom: 2em;
+ }
+ 
+ .portifolio .grid {
+     display: grid;
+     gap: 2em;
+ }
+ 
+ @media(min-width: 560px) {
+     .portifolio .grid {
+         grid-template-columns: 240px 240px;
+     }
+ }
+ 
+ @media(min-width: 850px) {
+     .portifolio .grid {
+         grid-template-columns: repeat(3, 240px);
+         align-content: center;
+         justify-content: center;
+         height: calc(100vh - 4em - 48px - 1.5em);
+     }
+ }
+ 
+ .portifolio figure {
+     text-align: center;
+ }
+ 
+ .img-portfolio {
+     width: 240px;
+     height: 180px;
+     object-fit: cover;
+     border-radius: 60px;
+     border: 1px solid black;
+     box-shadow: 30px 22px 40px black;
+     object-position: left bottom;
+     transition: transform 400ms;
+ }
+ 
+ .img-portfolio:hover {
+     transform: scale(1.2) rotateX(45deg);
+ }
+ 
+ .radio {
+     width: 10px;
+     height: 10px;
+     margin: auto;
+ }
+ 
+ .musica {
+     display: block;
+     position: relative;
+     left: 575px;
+     top: 475px;
+     width: 300px;
+ }
+ 
+ .contato .icons {
+     text-align: center;
+ }
+ 
+ .contato a {
+     color: whitesmoke;
+     font-size: 4em;
+     transition: text-shadow 1s;
+ }
+ 
+ .contato a:active,
+ .contato a:hover {
+     text-decoration: none;
+     text-shadow: 0px 0px 20px rgba(255, 255, 255, .5);
+ }
+ 
+ footer#rodape {
+     clear: both;
+     border-top: 1px solid #606060;
+ }
+ 
+ footer#rodape p {
+     text-align: center;
+ }
+ 
+ footer#rodape a {
+     text-decoration: none;
+     color: #000000;
+ }
